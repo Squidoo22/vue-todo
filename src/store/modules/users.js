@@ -49,7 +49,9 @@ const actions = {
 const getters = {
   getUser: (state) => state.user,
   getLoginError: (state) => state.loginError,
-  isAuthenticated: () => Object.keys(localStorage.getItem("user")).length !== 0,
+  isAuthenticated: () => {
+    return Object.keys(localStorage.getItem("user") || {}).length !== 0;
+  },
 };
 
 export default {
