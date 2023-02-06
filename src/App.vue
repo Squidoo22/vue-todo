@@ -56,4 +56,11 @@ export default {
   flex-shrink: 0;
   flex-basis: auto;
 }
+
+@media (max-width: 768px) {
+  .footer,
+  .header {
+    display: none;
+  }
+}
 </style>
